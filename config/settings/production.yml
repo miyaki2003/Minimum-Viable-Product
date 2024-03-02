@@ -1,0 +1,2 @@
+sorcery:
+    line_callback_url: 'https://reminder-chat-38cf4e1a3ae9.herokuapp.com/oauth/callback?provider=line'

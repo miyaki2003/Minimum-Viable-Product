@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   
   resources :calendars, only: %i[index]
 
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get 'oauth/callback', to: 'oauths#callback'
 end
