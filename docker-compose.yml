@@ -34,6 +34,13 @@ services:
     image: seleniarm/standalone-chromium:latest
     ports:
       - 4444:4444
+  https-portal3000:
+    image: steveltn/https-portal:1
+    ports:
+      - '3443:443'
+    environment:
+      STAGE: local
+      DOMAINS: 'localhost -> http://host.docker.internal:3000'
 volumes:
   postgres_data:
   bundle_data:

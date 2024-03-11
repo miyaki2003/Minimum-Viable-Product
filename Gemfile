@@ -22,21 +22,22 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 gem "bootsnap", require: false
 
+gem "sorcery"
+
+gem "config"
+
+gem 'bootstrap', '~> 5'
+
+gem 'line-bot-api'
+
+gem "sassc-rails"
+
 gem "simple_calendar"
-
-gem 'omniauth'
-
-gem 'omniauth-line'
-
-gem 'omniauth-rails_csrf_protection'
-
-gem 'sorcery'
-
-gem 'config'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'dotenv-rails'
+  gem 'pry-rails'
 end
 
 group :development do

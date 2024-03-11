@@ -1,12 +1,10 @@
 class OauthsController < ApplicationController
-  skip_before_action :require_login, only: [:oauth, :callback]
-
   def oauth
     login_at(:line)
   end
 
   def callback
-    provider = params[:provider]
+    provider = "line"
     if @user = login_from(provider)
       redirect_to root_path, notice: "#{provider.titleize}でログインしました。"
     else

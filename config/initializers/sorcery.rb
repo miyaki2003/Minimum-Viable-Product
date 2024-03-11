@@ -222,7 +222,7 @@ Rails.application.config.sorcery.configure do |config|
   config.line.key = ENV['LINE_KEY']
   config.line.secret = ENV['LINE_SECRET']
   config.line.callback_url = Settings.sorcery[:line_callback_url]
-  config.line.scope = 'profile'
+  config.line.scope = 'profile openid'
   # config.line.bot_prompt = "normal"
   # config.line.user_info_mapping = {name: 'displayName'}
 
@@ -543,7 +543,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
     # User's identifier in the `authentications` class.
     # Default: `:user_id`

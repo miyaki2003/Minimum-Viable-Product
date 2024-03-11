@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_01_060442) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_01_142245) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,13 +24,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_01_060442) do
     t.index ["user_id"], name: "index_authentications_on_user_id"
   end
 
-  create_table "line_users", force: :cascade do |t|
-    t.string "provider"
-    t.string "uid"
-    t.string "name"
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["uid", "provider"], name: "index_line_users_on_uid_and_provider", unique: true
   end
 
   create_table "users", force: :cascade do |t|
