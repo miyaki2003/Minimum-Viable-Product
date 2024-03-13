@@ -1,0 +1,2 @@
+class LineEvent < ApplicationRecord
+end
