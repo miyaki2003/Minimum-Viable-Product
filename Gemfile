@@ -26,11 +26,13 @@ gem "sorcery"
 
 gem "config"
 
-gem 'bootstrap', '~> 5'
+gem 'jquery-rails'
 
 gem 'line-bot-api'
 
-gem "sassc-rails"
+gem 'cssbundling-rails'
+
+gem 'jsbundling-rails'
 
 gem "simple_calendar"
 

@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   add_flash_types :success, :info, :warning, :danger
 
-  before_action :require_login
+  #before_action :require_login
   before_action :set_event, only: %i[edit update destroy]
 
   def index

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'liff/index'
   get 'staticpages/top'
 
   root "staticpages#top"
@@ -10,4 +11,6 @@ Rails.application.routes.draw do
   resources :events
 
   post '/callback', to: 'line_bot#callback'
+
+  get 'liff', to: 'liff#index'
 end
