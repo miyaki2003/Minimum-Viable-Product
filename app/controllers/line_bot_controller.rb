@@ -33,17 +33,6 @@ class LineBotController < ApplicationController
     head :ok
   end
 
-
-
-  events.each do |event|
-    if event.type == Line::Bot::Event::MessageType::Text
-      handle_text_message(event)
-    end
-  end
-
-  head :ok
-end
-
   private
 
   def handle_text_message(line_event)
@@ -67,11 +56,7 @@ end
   
   def parse_time(time_str)
   end
-
-
-
   
-
   def client
     @client ||= Line::Bot::Client.new { |config|
       config.channel_secret = ENV["LINE_MESSAGING_CHANNEL_SECRET"]
