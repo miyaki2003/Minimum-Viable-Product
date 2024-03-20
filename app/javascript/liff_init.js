@@ -1,3 +1,4 @@
+import $ from 'jquery';
 document.addEventListener("DOMContentLoaded", function() {
 
   const liffAppElement = document.getElementById('liff-app');
