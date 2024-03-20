@@ -10,8 +10,6 @@ gem "pg", "~> 1.1"
 
 gem "puma", ">= 5.0"
 
-gem "importmap-rails"
-
 gem "turbo-rails"
 
 gem "stimulus-rails"
@@ -26,20 +24,19 @@ gem "sorcery"
 
 gem "config"
 
-gem 'jquery-rails'
-
 gem 'line-bot-api'
 
 gem 'cssbundling-rails'
 
 gem 'jsbundling-rails'
 
-gem "simple_calendar"
+gem "google-cloud-language"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'dotenv-rails'
   gem 'pry-rails'
+  gem "rspec-rails"
 end
 
 group :development do

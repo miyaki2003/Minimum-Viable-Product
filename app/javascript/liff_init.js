@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  const liffId = "2003779201-OwqpG72P";
-  initializeLiff(liffId);
+  const liffAppElement = document.getElementById('liff-app');
+  if (liffAppElement) {
+    const liffId = "2003779201-OwqpG72P";
+    initializeLiff(liffId);
+  }
 });
 
 function initializeLiff(liffId) {

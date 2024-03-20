@@ -21,10 +21,13 @@ services:
       - .:/app
       - bundle_data:/usr/local/bundle:cached
       - node_modules:/app/node_modules
+      - ./path/on/host/credentials.json:/app/credentials.json
     environment:
       TZ: Asia/Tokyo
       SELENIUM_DRIVER_URL: http://chrome:4444/wd/hub
       RAILS_ENV: development
+    env_file: 
+      - .env
     ports:
       - "3000:3000"
     depends_on:
