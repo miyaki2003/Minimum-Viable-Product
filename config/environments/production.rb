@@ -96,4 +96,5 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
   #config.require_master_key = true
   config.assets.css_compressor = nil
+  config.log_level = :debug
 end
